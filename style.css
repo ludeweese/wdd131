@@ -16,3 +16,11 @@ body {
     padding: 2em;
   }
   
+  /* Image styling */
+  img {
+    border-radius: 50%; /* Makes the image circular */
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensures the image fits nicely in the circle */
+    margin-top: 10px;
+}
