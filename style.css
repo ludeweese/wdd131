@@ -6,7 +6,7 @@ body {
   }
   
   header, footer {
-    background-color: #00827f; 
+    background-color: #0a615f; 
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -17,10 +17,10 @@ body {
   }
   
   /* Image styling */
-  img {
-    border-radius: 50%; /* Makes the image circular */
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* Ensures the image fits nicely in the circle */
-    margin-top: 10px;
-}
+        img {
+            border-radius: 50%; /* Makes the image circular */
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Ensures the image fits nicely in the circle */
+            margin-top: 10px;
+        }
