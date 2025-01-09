@@ -1,0 +1,67 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 600px;
+    margin: 50px auto; /* top and bottom margin for breathing space */
+    padding: 50px 130px; /* 50px for top and bottom, 130px for sides */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 500; /*Lighter font to match the example*/
+}
+
+h2 {
+    text-align: center;
+    color: #006EB6;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    position: relative;
+    font-weight: 300; /*Lighter font*/
+}
+/*adding the gray line*/
+h2::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+    margin: 1px 0 25px;/* Reduced top margin to bring the line closer to h2 */
+}
+
+p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+ol.does-list {
+    padding-left: 38px; /* Adjusted padding to move number markers in */
+}
+
+ol.does-list li {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
