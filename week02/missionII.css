@@ -108,7 +108,7 @@ footer img {
 }
 
 .dark footer img {
-    filter: invert(1); /* Invert logo color for dark mode */
+    content: url('byui-logo_white.png'); /* Use a white logo in dark mode */
 }
 
 .dark label {
