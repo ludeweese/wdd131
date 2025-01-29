@@ -217,12 +217,12 @@ img {
     /* Navbar - make it horizontal */
     .nav-links {
         display: flex;
-        justify-content: center;  /* Center nav links on larger screens */
-        gap: 40px;  /* Increased space on larger screens */
+        justify-content: center;  
+        gap: 40px;  
     }
 
     h1, h2 {
-        font-size: 2em;  /* Adjusted for large view */
+        font-size: 2em;  
     }
 
     header, footer {
@@ -230,6 +230,6 @@ img {
     }
 
     h2 {
-        font-size: 1.2em;  /* Keep the font size small on large view */
+        font-size: 1.2em;  
     }
 }
