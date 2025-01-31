@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: Mooli, sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+
+/* Universal h2 style */
+h2 {
+    font-size: 1.2em !important; 
+    color: black !important; 
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Adjustments for other screens */
+@media screen and (max-width: 599px) {
+    h2 {
+        font-size: 1.2em !important; 
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    h2 {
+        font-size: 1.2em !important; /* Ensures it's still small on large screens */
+    }
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer {
+    font-size: 0.9em;
+}
+
+/* Navbar Styles */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    color: white;
+}
+
+.menu-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Navbar Links */
+.nav-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color); 
+}
+
+/* Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 15px;
+    margin-top: 0;
+    justify-items: center;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer; /* Make it clickable */
+}
+
+/* Modal Viewer Styles */
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.viewer .modal-img {
+    max-width: 90%; 
+    max-height: 90%; 
+    object-fit: contain;
+    border: 5px solid var(--accent-color); 
+}
+
+/* Close button */
+.close-viewer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--primary-color); 
+    color: var(--text-light);
+    font-size: 1.5em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-viewer:hover {
+    background-color: var(--accent-color); /* Change color on hover */
+}
+
+/* Media Queries */
+@media screen and (max-width: 999px) {
+    .menu-text {
+        display: block;
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default */
+    }
+
+    .nav-links.active {
+        display: block; /* Show nav links when active */
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .menu-text {
+        display: block;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: block;
+        text-align: center;
+    }
+
+    .nav-links li {
+        padding: 5px 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 10px 0;
+        font-size: 1.2em;
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjusted for small screens */
+    }
+
+    /* Modal viewer adjustments for small screens */
+    .viewer .modal-img {
+        max-width: 70%; 
+        max-height: 70%; 
+    }
+
+    .close-viewer {
+        top: 15px;
+        right: 15px;
+        font-size: 2em; 
+        padding: 15px; 
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+    }
+
+    h1, h2 {
+        font-size: 2em;
+    }
+}
+
+/* Very small screens (e.g., mobile) */
+@media screen and (max-width: 480px) {
+    /* Modal viewer adjustments for extra small screens */
+    .viewer .modal-img {
+        max-width: 90%; 
+        max-height: 90%; 
+    }
+
+    .close-viewer {
+        top: 20px;
+        right: 20px;
+        font-size: 2.5em; 
+        padding: 20px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the menu initially on small screens */
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the menu when 'active' class is added */
+    }
+
+    .menu-text {
+        display: block; /* Make sure the menu button is visible */
+    }
+}

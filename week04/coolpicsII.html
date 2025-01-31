@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A photography gallery.">
+    <meta name="author" content="Lucilene DeWeese">
+    <title>Cool Pics 📷</title>
+    <link rel="stylesheet" href="coolpicsII.css">
+    <script src="coolpicsII.js" defer></script> 
+</head>
+<body>
+    <!-- Modal Structure -->
+    <div class="viewer" id="viewer">
+        <button class="close-viewer">X</button>
+        <img src="norris-full.jpeg" alt="Large view of photograph" id="modal-img">
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Cool Pics 📷</h1>
+            </div>
+            <span class="menu-text">Menu</span>  
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Places</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Current Work</h2>
+        
+        <!-- Gallery Section -->
+        <section class="gallery">
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 1" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 2" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 3" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 4" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 5" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 6" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 7" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 8" data-full="norris-full.jpeg">
+            </figure>
+            <figure>
+                <img src="norris-sm.jpeg" alt="Photograph 9" data-full="norris-full.jpeg">
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>©2023 Not a real site 😀</p>
+    </footer>
+
+    <!-- Menu Button for Mobile 
+    <div class="menu-button">
+        <button onclick="toggleMenu()">☰</button>
+    </div>-->
+</body>
+</html>
