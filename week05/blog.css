@@ -1,0 +1,221 @@
+/***** Global Styles *****/
+body {
+    font-family: 'Lora', serif; /* Use Lora as the main font */
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    font-family: 'Lora', serif;
+  }
+  
+  /***** Header Styles *****/
+  header {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    justify-content: center; /* Center content vertically */
+  }
+  
+  header h1 {
+    margin: 0;
+    color: #000;
+    font-size: 35px;
+  }
+  
+  header h1 a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /***** Navigation Styles *****/
+  nav {
+    text-align: right;
+    margin-top: 10px;
+    position: relative;
+    padding: 8px 20px;
+  }
+  
+  nav::before,
+  nav::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #EFC69B;/*my gold lines*/
+    position: absolute;
+    left: 0;
+  }
+  
+  nav::before {
+    top: 0;
+  }
+  
+  nav::after {
+    bottom: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+  }
+  
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li a {
+    color: #AF1B3F;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    border-bottom: 2px solid #EFC69B;
+    color: #EFC69B;
+  }
+  
+  /***** Main Styles *****/
+  main {
+    text-align: center;
+    padding: 20px;
+    max-width: 960px;
+    margin: auto;
+  }
+  
+  main p.filter-form {
+    text-align: right;
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+  
+  /***** Article Styles *****/
+  article {
+    display: flex;
+    flex-direction: column; /* Make the content stack vertically */
+    margin-bottom: 30px;
+    gap: 20px; /* Add space between sections */
+    
+    
+  }
+  
+  article .article-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  time {
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: left;
+    margin-bottom: 0; /* Remove space after date */
+  }
+  
+  h2 {
+    color: #AF1B3F;
+    font-size: 1.8em;
+    margin-bottom: 10px; /* Reduce margin below heading */
+    text-align: left;
+  }
+  
+  .additional-info {
+    display: flex;
+    flex-direction: column; /* Stack additional info vertically */
+    margin-top: 0;
+  }
+  
+  .age-genre-stars {
+    display: flex;
+    flex-direction: column; /* Stack genre, stars, and age range vertically */
+    gap: 5px; /* Space between each item */
+    align-items: flex-start; /* Align items to the left */
+  }
+  
+  .age-range, .genre, .stars {
+    text-align: left;
+    font-size: 1.1em;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 1.2em;
+  }
+  
+  /* Post Content Styles */
+  .post-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    top: -150px; 
+    padding-left: 250px;  
+    padding-right: 250px; 
+  }
+  
+  .post-content figure {
+    margin: 20px 0;
+    text-align: center;
+  }
+  
+  .post-content a {
+    color: #AF1B3F;
+    font-weight: bold;
+  }
+  
+  .post-content a:hover {
+    border-bottom: 2px solid #EFC69B;
+  }
+  
+  /* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    article {
+      flex-direction: column;
+      margin-bottom: 20px; /* space out articles */
+    }
+  
+    .additional-info {
+      flex-direction: column;
+    }
+  
+    .post-content {
+      top: 0; /* Reset top to 0 on smaller screens */
+      padding-left: 20px;  
+      padding-right: 20px; 
+      margin-top: 20px; 
+      max-width: 100%; /* Ensure content doesn't overflow */
+    }
+  
+    .post-content figure {
+      margin: 10px 0; /* Adjust margin for images */
+    }
+  
+    .post-content h2 {
+      font-size: 1.6em; 
+    }
+  
+    .post-content p {
+      font-size: 1.1em; /* for better readability */
+    }
+  
+    .filter-form {
+      font-size: 1em; 
+      margin-top: 10px; 
+    }
+  }
+  
+  
