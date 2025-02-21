@@ -1,0 +1,86 @@
+/* form-demo.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    text-align: center; 
+    margin-bottom: 20px; 
+    width: 100%; 
+}
+
+header h1 {
+    display: inline-block; 
+    padding: 0 8px; 
+    text-align: left; 
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%; 
+}
+
+textarea {
+    height: 80px; 
+    resize: vertical; 
+}
+
+button {
+    background-color: #4caf50; 
+    color: white; 
+    padding: 6px 12px; /* for a smaller button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; 
+    width: auto; /* Don't stretch the button to full width */
+    align-self: flex-start; 
+    margin-top: 10px; 
+}
+
+button:hover {
+    background-color: #1a5a3a; 
+}
+
+.errors > p {
+    border: 1px solid red;
+    padding: 0.5em;
+}
+
+/* Style the select arrow for Safari */
+select::-webkit-inner-spin-button,
+select::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Style the select arrow for other browsers */
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.hide {
+    display: none; /* Initially hide the credit card input and label */
+}

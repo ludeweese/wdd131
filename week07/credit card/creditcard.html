@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Credit card submission form for a stylish UI">
+    <meta name="author" content="Lucilene">
+    <title>Credit Card Form</title>
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png">
+    <link rel="stylesheet" href="creditcard.css">
+</head>
+    <body>
+        <header>
+            <h1></h1>
+        </header>
+
+        <main>
+            <section class="credit-card-form">
+                
+                <form action="#" method="POST" class="credit-card-form-grid" novalidate>
+                    <!-- Card Container -->
+                    <div class="card-container">
+                        <!-- Card Front -->
+                        <div class="card-front">
+                            <div class="total">
+                                <p>Total: $199</p>
+                                <img src="/images/myicon.png" alt="Custom Icon" class="custom-icon">
+
+
+
+                                
+                            </div>
+                            <div class="card-details">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" name="card-number" 
+       placeholder="1234 5678 9101 1020" 
+       required maxlength="19" 
+       pattern="\d{4} \d{4} \d{4} \d{4}" 
+       title="Please enter a valid card number in the format: 1234 5678 9101 1020">
+
+
+                                <div class="name-expiry">
+                                    <div class="cardholder-name">
+                                        <label for="card-name">Card holder</label>
+                                        <input type="text" id="card-name" name="card-name" placeholder="John Doe" required>
+                                    </div>
+
+                                    <div class="expiry-date">
+                                        <label for="expiry-mm">Expiration</label>
+                                        <div class="expiry-container">
+                                            <input type="text" id="expiry-mm" name="expiry-mm" placeholder="MM" required maxlength="2" pattern="\d{2}" title="Please enter a valid month">
+                                            <input type="text" id="expiry-yy" name="expiry-yy" placeholder="YY" required maxlength="2" pattern="\d{2}" title="Please enter a valid year">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card Back -->
+                        <div class="card-back">
+                            <label for="cvv-back">CVC/CVV</label>
+                            <input type="text" id="cvv-back" name="cvv-back" placeholder="xxx" required maxlength="3" pattern="\d{3}" title="Please enter a valid CVC">
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+    </html>
