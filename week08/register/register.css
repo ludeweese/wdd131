@@ -1,0 +1,166 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Wrapper to Control Layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Container to Center Content */
+.container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Header and Description Styling */
+h1, p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Rainbow Border for h1 */
+h1 {
+    font-size: 28px;
+    color: #056267;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 5px solid;
+    border-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet) 1;
+}
+
+p {
+    font-size: 16px;
+    color: #073a27;
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Fieldsets */
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Input Focus */
+input:focus {
+    border-color: #04cfba;
+    outline: none;
+}
+
+/* Participants Section */
+#participants {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px; 
+}
+
+#addParticipant {
+    width: 100%;
+    background: #2d052d; 
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+    margin-bottom: 15px; 
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: #05463efb; 
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effects */
+#addParticipant:hover {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+}
+
+button[type="submit"]:hover {
+    background: Green;
+
+/* Summary Message */
+#summary {
+    display: none;
+    background: #e8f5e9;
+    color: #046559;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #participants {
+        flex-direction: column;
+    }
+}
+}
