@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap");
 
 /* Global Variables */
@@ -9,6 +11,9 @@
   --primary-font: Arial, Helvetica, sans-serif;
   --secondary-font: 'Fredoka', sans-serif;
   --logo-font: 'Playfair Display', serif; 
+  /* Layout */
+  --whitespace: 1rem;
+  --max-width: 960px;
 }
 
 /* Global Styles */
@@ -95,13 +100,19 @@ img {
 /* Recipe Card */
 .recipe {
   background-color: white;
-  margin: 1rem auto;
-  padding: 1rem;
+  margin: 3rem 3rem;
+  padding: 10rem;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
   max-width: 100%;
+  flex-direction: column;
+  gap: 3rem;
+
+  
+        
 }
+
 
 .recipe h2 {
   font-family: var(--secondary-font);
@@ -192,7 +203,6 @@ img {
 }
 
 
-
 /* Mobile layout (Less than 800px width) */
 @media (max-width: 799px) {
   .recipe {
@@ -228,6 +238,27 @@ img {
   .rating span {
     color: gold;
   }
+}
+
+.tags {
+  margin: var(--whitespace) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--whitespace);
+  color:#2ca973;
+}
+.tag {
+  border: thin solid var(--dark);
+  border-radius: 4px;
+  padding: 2px;
+  font: var(--tags);
+  text-transform: lowercase;
+  color: #025a4b;
+}
+.label {
+  margin: 0;
+  font: var(--label);
+  color: #024451;
 }
 
 /* Footer */
@@ -396,3 +427,4 @@ footer a {
     margin-bottom: 5px;
   }
   
+

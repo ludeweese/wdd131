@@ -105,7 +105,7 @@ const recipes = [
 		tags: ['Southwest', 'entree'],
 		description:
 			'Black beans and tomatoes served over a bed of rice. Top with cheese and scoop up with tortilla chips for maximum enjoyment.',
-		image: './images/black-beans-and-rice.jpg',
+		image: '../images/black-beans-and-rice.jpg',
 		recipeIngredient: [
 			'1 Medium Onion, diced',
 			'2 Cloves Garlic, minced',
