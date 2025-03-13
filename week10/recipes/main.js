@@ -1,8 +1,8 @@
- // modules import
+// modules import
 import html from "./html.mjs";
 import recipes from "./recipes.mjs";
 
- // GLobal values
+// Global values
 const randomNumber = function(n) { return Math.floor(Math.random() * n); };
 const recipe = recipes[randomNumber(recipes.length)];
 const recipeBook = document.querySelector("main");
@@ -20,7 +20,7 @@ function getRecipes(searchTerms) {
   }
 
   // Count number of hits on search terms
-  recipes.forEach(recipe => {    
+  recipes.forEach(recipe => {
     recipe.hits = 0;
     searchTerms.forEach(term => {
       if (recipe.author.toLowerCase().includes(term)) recipe.hits++;
@@ -35,15 +35,20 @@ function getRecipes(searchTerms) {
     });
   });
 
-  // Filter, sort and display
-  recipeBook.innerHTML = recipes
-    .filter(recipe => recipe.hits > 0)
-    .sort((a, b) => {
-      if (a.hits === b.hits) return a.name.localeCompare(b.name);
-      return b.hits - a.hits;
-    })
-    .map(recipe => html(recipe))
-    .join("");
+  const filteredRecipes = recipes.filter(recipe => recipe.hits > 0);
+  console.log("Filtered Recipes: ", filteredRecipes.length); // Log the number of matched recipes
+
+  if (filteredRecipes.length > 0) {
+    recipeBook.innerHTML = filteredRecipes
+      .sort((a, b) => {
+        if (a.hits === b.hits) return a.name.localeCompare(b.name);
+        return b.hits - a.hits;
+      })
+      .map(recipe => html(recipe))
+      .join("");
+  } else {
+    recipeBook.innerHTML = "<p>No recipes found.</p>"; // Show message if no recipes match
+  }
 }
 
 /**LISTEN()
@@ -61,17 +66,22 @@ function listen(event) {
         event.preventDefault();
         searchBar.value = "";
       }
-      getRecipes(searchString.toLowerCase().split(/\s+/));
+      getRecipes(searchString.toLowerCase().split(/\s+/)); // Call getRecipes with search terms
     } else {
-      // Handle case where input is empty
       console.log("No search terms entered");
+      recipeBook.innerHTML = recipes
+        .map(recipe => html(recipe)) // Display all recipes if no search term is entered
+        .join("");
     }
   }
 }
 
-//event listeners
+// Event listeners
 searchBar.addEventListener("keydown", listen);
 searchButton.addEventListener("click", listen);
+
+// Display a random recipe when the page loads
 document.addEventListener("DOMContentLoaded", () => {
-  recipeBook.innerHTML = html(recipe);
+  console.log("DOM Content Loaded");
+  recipeBook.innerHTML = html(recipe); // Display a random recipe initially
 });
