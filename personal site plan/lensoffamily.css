@@ -1,0 +1,564 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Satisfy&display=swap");
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    background-color: #9CBA9D;
+    padding: 5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2e8d7;
+    overflow-x: hidden;
+    font-size: 85%;
+    margin: 0;
+    padding: 1em;
+}
+
+h2 {
+    font-family: "Satisfy", cursive;
+    font-size: 1.5em; 
+    color: #06677D; 
+    margin: 0.5em 0;
+}
+
+
+ 
+h1, .H1Tag {
+    background: #06677d;
+    color: #fff;
+    display: inline-block;
+    font-weight: normal;
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    font-family: "Satisfy", cursive !important;
+}
+
+.h1Tag {
+    font-size: 6em;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #006F6A;
+    padding: 10px 0;
+    text-align: center;
+}
+  
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+  
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+  
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 4px; 
+}
+   
+
+.navbar ul li a:hover {
+    color: #09361c; 
+    background-color: #9CBA9D; 
+}
+
+/* Responsive Navigation */
+@media (max-width: 480px) {
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.music {
+    color: #06677d;
+    font-size: 20px !important;
+    text-shadow: 2px 2px 4px rgba(247, 242, 242, 0.5);
+}
+
+/* Banner Video */
+.banner-video {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+  
+.overlay {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    text-align: left;
+    color: white;
+    z-index: 2;
+}
+  /*into text*/
+.intro-text {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container {
+    max-width: 800px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fcfafa;
+    border-radius: 10px;
+}
+
+.container p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container h2 {
+    font-size: 1.5rem;
+    color: #006F6A;
+    margin-bottom: 10px;
+}
+
+  
+/* Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #fcfafa;
+}
+  
+.slider {
+    display: flex;
+    animation: slide 40s infinite linear;
+    gap: 5px;
+}
+  
+.slide {
+    flex: 0 0 auto;
+    width: calc(25% - 5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+  
+/* Testimonial Container */
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    margin: 20px 0;
+}
+  
+/* Testimonial Box */
+.testimonial-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    position: relative; 
+}
+  
+.quote-mark {
+    font-size: 100px; 
+    color: #09361c;
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+}
+  
+.testimonial-comment {
+    font-size: 16px;
+    color: #06677D;
+    line-height: 1.5;
+    margin-top: 60px; 
+}
+  
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 20px;
+    color: #073735;
+}
+  
+/* Testimonial Introduction */
+.testimonial-introduction {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+  
+.testimonial-introduction h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+  
+.testimonial-introduction p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+  
+.testimonial-introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+  
+.text-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+  
+/* Testimonial Box Author Photo */
+.author-photo {
+    width: 50px;
+    height: 50px;
+    background-color: #09361c;
+    border-radius: 50%;
+    margin-bottom: 10px; 
+    overflow: hidden; 
+}
+  
+.author-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+  
+@media (min-width: 1024px) {
+    .testimonial-container {
+        flex-direction: row; 
+    }
+}
+  
+@media (max-width: 1023px) {
+    .testimonial-container {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+  
+@media (max-width: 480px) {
+    .slide {
+        width: calc(50% - 5px); 
+    }
+}
+  
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+  
+.intro-text,
+.slider-container,
+.testimonial-introduction,
+.testimonial-container
+{
+    margin-bottom: 20px; 
+}
+  
+.testimonial-introduction {
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    height: auto; 
+    padding: 20px 0; 
+}
+  
+.testimonial-introduction .text-container {
+    max-width: 800px;
+    width: 90%; 
+    margin: 0 auto; 
+    padding: 20px;
+    border: 2px solid #09361c;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+  
+
+  
+@media (max-width: 768px) {
+    .video-container {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .video-container img {
+        display: none;
+    }
+}
+  
+@media (min-width: 769px) {
+    .slider {
+        transition: transform 1s ease-in-out;
+    }
+}
+  
+@media (max-width: 768px) {
+    .slider {
+        transition: transform 0.1s ease-in-out;
+    }
+}
+
+/* Photo Gallery */
+.gallery {
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #fcfafa;
+    padding-top: 50px;
+}
+
+.gallery h4 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.gallery p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* 3 rows & 6 columns layout */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    gap: 15px;
+    padding: 15px;
+    justify-content: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1400px) {
+    .photo-gallery {
+        grid-template-columns: repeat(5, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 1200px) {
+    .photo-gallery {
+        grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .photo-gallery {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 400px) {
+    .photo-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #006F6A;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+  
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+  
+footer a:hover {
+    text-decoration: underline;
+}
+  
+.footer-content p {
+    margin: 5px 0;
+}
+  
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+    footer a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+    .footer-content p {
+        font-size: 14px;
+        margin: 3px 0;
+    }
+}
+  
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 0;
+    }
+    footer a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+    .footer-content p {
+        font-size: 12px;
+    }
+}
+  
+/* Logo Bar */
+.logo-bar {
+    background-color: #006F6A;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    top: 0;
+    width: 100%;
+}
+  
+.logo-bar img {
+    max-width: 200px;
+    height: auto;
+}
+  
+/* Basic styling for the content section */
+.content-section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+  
+.content-section h4 {
+    font-size: 24px;
+    color: #09361c;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+/* Styling for the quote container */
+.quote-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+  
+/* Styling for individual quote boxes */
+.quote-box {
+    background-color: #9CBA9D;
+    color: #09361c;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Lato", sans-serif;
+}
+  
+/* Styling for the quote text */
+.quote-box p {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+    
+}
+  
+/* Styling for the author */
+.quote-box span {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+}
+  
+/* Quote container styling */
+#quote-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+  
+@media (max-width: 768px) {
+    #quote-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.social-icon {
+    width: 24px; 
+    height: 24px;
+    margin: 0 5px; 
+    vertical-align: middle;
+}
