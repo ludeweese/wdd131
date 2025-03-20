@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Through the Lens of Family</title>
+    <meta name="description" content="A heartfelt collection of family photography that captures meaningful moments and connections.">
+    <meta name="author" content="Lucilene DeWeese">
+    <meta property="og:title" content="Through the Lens of Family">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="A heartfelt collection of family photography that captures meaningful moments and connections.">
+    <meta property="og:image" content="images/family-photography-banner.jpg">
+    <meta property="og:url" content="my-website-url-here">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="lensoffamily.css">
+</head>
+<body>
+
+    <!-- Logo Bar -->
+  <div class="logo-bar">
+    <img src="./images/logo.jpg" alt="my Logo">
+  </div>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="about.html">About</a></li>
+
+    </ul>
+  </nav>
+
+  <!-- About the Photographer Section -->
+<section class="about-photographer">
+    <div class="about-content">
+        <img src="./images/lucilene.jpg" alt="Lucilene DeWeese" class="profile-photo">
+        <div class="bio">
+            <h1>About the Artist</h1>
+            <p>Lucilene DeWeese has loved photography since she was a young girl. Her passion grew even stronger after two life-changing events: The sudden loss of her mom and, two years later, the arrival of her daughter.</p>
+            <p>Although her daughter will never get to meet her grandmother, Lucilene finds comfort in the photos her mom left behind. They’re more than just pictures; they’re memories filled with love and connection. This experience inspired Lucilene to dedicate herself to capturing family portraits, preserving the special bonds and stories that make each family unique.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About the Series Section -->
+<section class="about-series">
+    <h1>About the Series</h1>
+    <p><strong>Through the Lens of Family</strong> is a heartfelt collection that celebrates the unique bonds and special moments that make each family story meaningful. Lucilene’s photography captures her belief that every moment, big or small, deserves to be cherished and remembered for generations.</p>
+    <p>Each image reflects her passion for showcasing the connections, growth, and love that define a family. This series is a gentle reminder to nurture those relationships and treasure the memories they create.</p>
+</section>
+
+ 
+<!-- Contact Section -->
+<section class="contact-info">
+    <h1>Contact Me</h1>
+    <div class="contact-details" id="contact-details">
+        <p>If you'd like to reach out, please feel free to get in touch!</p>
+        <p>Email: <a href="mailto:lucilene@thisisnotreal.com">lucilene@thisisnotreal.com</a></p>
+        <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+    </div>
+    
+    <h2 id="send-message-header">Send Me a Message</h2>
+    
+    <!-- Contact Form -->
+    <form id="contact-form" action="#" method="post" class="contact-form" onsubmit="handleFormSubmission(event)">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Thank You Message (Initially hidden, will be shown after form submission) -->
+    <div id="thank-you-message" style="display: none;">
+        <h2>Thank You!</h2>
+        <p>Your message has been sent. I'll get back to you as soon as possible.</p>
+    </div>
+</section>
+
+
+ 
+ 
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Lucilene DeWeese </p>
+        <p>Follow me on  
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="./images/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/yourprofile" target="_blank">
+                <img src="./images/fb.png" alt="Facebook" class="social-icon">
+            </a>
+        </p>
+    </div>
+</footer>
+ 
+  <!-- Link to external JavaScript file -->
+<script src="thanku.js"></script>
+</body>
+
+</body>
+</html>

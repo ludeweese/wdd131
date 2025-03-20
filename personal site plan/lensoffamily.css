@@ -562,3 +562,179 @@ footer a:hover {
     margin: 0 5px; 
     vertical-align: middle;
 }
+
+
+/* About the Photographer Section */
+.about-photographer {
+    max-width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background-color: #fcfafa;
+    border-radius: 10px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #09361c;
+}
+
+.bio {
+    max-width: 700px;
+}
+
+.bio h1 {
+    font-size: 2rem;
+    color: #f8fafa;
+    margin-bottom: 15px;
+}
+
+.bio p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* About the Series Section */
+.about-series {
+    max-width: 1000px; 
+    margin: 50px auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.about-series h1 {
+    font-size: 2rem;
+    color: #fafdfd;
+    margin-bottom: 15px;
+}
+
+.about-series p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .profile-photo {
+        margin-right: 20px;
+    }
+}
+
+/* Ensuring both sections have similar heights and alignments */
+.about-photographer, .about-series {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* Additional spacing for the sections */
+.about-photographer, .about-series {
+    padding-bottom: 60px; 
+}
+
+
+/* Contact Section */
+.contact-info {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fcfafa;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contact-info h1 {
+    font-size: 2rem;
+    color: #fefcfd;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #006F6A;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #006F6A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #004F44;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 20px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
