@@ -495,7 +495,7 @@ footer a:hover {
 /* Logo Bar */
 
 .logo-bar {
-    background: linear-gradient(to bottom, #006F6A, white);
+    background:#006F6A;
     padding: 10px 0;
     position: relative;
     top: 0;
