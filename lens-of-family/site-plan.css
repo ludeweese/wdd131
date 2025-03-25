@@ -530,3 +530,19 @@ figcaption {
       width: 100%; /* Ensures images take up the full width */
     }
   }
+
+  /* Logo Section */
+section img {
+  max-width: 200px;
+  height: auto;
+  /* Add a shadow to the logo */
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* For small views: smaller logo with shadow */
+@media (max-width: 600px) {
+  section img {
+      max-width: 120px; /* Adjust the logo size */
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); 
+  }
+}

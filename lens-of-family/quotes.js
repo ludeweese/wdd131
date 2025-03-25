@@ -1,6 +1,7 @@
 // quotes.js
 
-import quotes from '../personal site plan/quotes.mjs';  
+import quotes from '../lens-of-family/quotes.mjs'; 
+
 
 // Get the quote-container element where the quotes will be appended
 const quoteContainer = document.getElementById('quote-container');
